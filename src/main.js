@@ -8,17 +8,17 @@ import axios from 'axios';
 
 
 // import { getImages } from './js/pixabay-api.js'; //← функція фетчу зображень з серверу
-// import { galleryRender} from './js/render-functions.js'; //← імпорт функції рендеру
+import { galleryRender} from './js/render-functions.js'; //← імпорт функції рендеру
 
 //===============================================================================
 // імпорт DOM елементів
 
-// const refs = {
-//     form: document.querySelector('.search-form'),
-//     gallery: document.querySelector('.gallery'),
-//     loader: document.querySelector('.loader'),
+const refs = {
+    form: document.querySelector('.search-form'),
+    gallery: document.querySelector('.gallery'),
+    loader: document.querySelector('.loader'),
 //     loadMoreBtn: null,
-// }
+}
 
 // let currentPage = 1; //← відображаємо номер поточної сторінки (після кожних 20 фото завантажуємо наступні 20, тобто додаємо нову сторінку)
 
