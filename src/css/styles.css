@@ -15,8 +15,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important; /* Устанавливаем фон */
-  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important; /* Устанавливаем фон */
+  box-shadow: 0 0 0 30px transparent inset !important;
   -webkit-text-fill-color: #000 !important; /* Цвет текста */
   border-radius: 0 !important; /* Убираем скругление */
 }
@@ -26,8 +26,9 @@ input:autofill,
 input:autofill:hover,
 input:autofill:focus,
 input:autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    /* Устанавливаем фон */
+    box-shadow: 0 0 0 30px transparent inset !important;
   -webkit-text-fill-color: #000 !important;
   border-radius: 0 !important;
 }

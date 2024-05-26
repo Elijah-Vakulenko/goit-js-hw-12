@@ -7,7 +7,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import axios from 'axios';
 
 
-// import { getImages } from './js/pixabay-api.js'; //← функція фетчу зображень з серверу
+import { getImages } from './js/pixabay-api.js'; //← функція фетчу зображень з серверу
 import { galleryRender} from './js/render-functions.js'; //← імпорт функції рендеру
 
 //===============================================================================
@@ -17,36 +17,53 @@ const refs = {
     form: document.querySelector('.search-form'),
     gallery: document.querySelector('.gallery'),
     loader: document.querySelector('.loader'),
-//     loadMoreBtn: null,
+    loadMoreBtn: document.querySelector('.load'),
 }
 
-// let currentPage = 1; //← відображаємо номер поточної сторінки (після кожних 20 фото завантажуємо наступні 20, тобто додаємо нову сторінку)
+let currentPage = 1; //← відображаємо номер поточної сторінки (після кожних 20 фото завантажуємо наступні 20, тобто додаємо нову сторінку)
 
 // //===============================================================================
 // // Налаштовуємо SimpleLightbox
 
-// function initilizeLightbox() {
-//     let lightbox = new SimpleLightbox('.gallery a', {
-//     captionDelay: 250,
-//     captionsData: 'alt',
-//     captionPosition: 'bottom',
-//     });
+function initilizeLightbox() {
+    let lightbox = new SimpleLightbox('.gallery a', {
+    captionDelay: 250,
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    });
     
-//      lightbox.refresh();
-// }
+     lightbox.refresh();
+}
 // //===============================================================================
-// //IziToast Alert
+// //IziToast notifications:
 
-// function showNoResultsMessage() {
-//     iziToast.error({
-//         title: 'Error!',
-//         message: `Sorry, there are no images matching your search query. Please try again!`,
-//         position: "center",
-//         messageColor: 'white',
-//         backgroundColor: '#ff3d00',
-//         progressBarColor: '#B51B1B',
-//     });
-// }
+function showNoResultsMessage() { //функц. для помилки пошуку
+    iziToast.error({
+        title: 'Error!',
+        message: `Sorry, there are no images matching your search query. Please try again!`,
+        position: "center",
+        messageColor: 'white',
+        backgroundColor: '#ff3d00',
+        progressBarColor: '#B51B1B',
+    });
+}
+
+function endOfSearchResults() { // функц. для к1нця пошуку
+    iziToast.warning({
+        title: 'Caution!',
+        message: `We're sorry, but you've reached the end of search results.`,
+        position: "center",
+        messageColor: 'white',
+        backgroundColor: '#2D4841',
+        progressBarColor: '#658474',
+    });
+}
+//=================================================================================
+//Скрол вниз 
+function getBoundingClientRect() {
+    window.scrollBy(0, window.innerHeight);
+
+}
 
 // //===============================================================================
 // // Налаштовуємо слухач подій та визначаємо, що буде відбуватися при запиті
@@ -92,7 +109,7 @@ const refs = {
 // });
 
 // //============================================================================
-// // Додаємо наступну сторінку з 20ма зображеннями при кліку по кнопці
+// // Додаємо наступну сторінку з 15ма зображеннями при кліку по кнопці
 
 // function loadMoreImages() {
 //     currentPage++; // 
@@ -107,15 +124,7 @@ const refs = {
 //             const markup = galleryRender(data.hits);
 //             refs.gallery.insertAdjacentHTML('beforeend', markup);
 
-//             let lightbox = new SimpleLightbox('.gallery a',
-//                 {
-//                     captionDelay: 250,
-//                     captionsData: 'alt',
-//                     captionPosition: 'bottom',
-//                 });
-            
-//             lightbox.refresh();
-//         }
+//        
 
 //         refs.loader.classList.add('is-hidden');
 //     });
