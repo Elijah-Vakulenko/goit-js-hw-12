@@ -35,6 +35,7 @@ function initializeLightbox() {
             captionDelay: 250,
             captionsData: 'alt',
             captionPosition: 'bottom',
+            className: 'simple-lightbox',
         });
     }
 }
@@ -137,7 +138,7 @@ async function loadMoreImages() {
     refs.loadMoreBtn.classList.add('is-hidden'); // ховаємо кнопку "Load more"
     refs.gallery.insertAdjacentHTML('beforeend', '<div class="loader"></div>'); // додаємо loader
 
-    
+
     const data = await getImages(currentQuery, currentPage); //завантажуємо діні з серверу
     const loader = document.querySelector('.gallery .loader');
     if (loader) {
