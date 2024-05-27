@@ -27,8 +27,8 @@ input:autofill:hover,
 input:autofill:focus,
 input:autofill:active {
   -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-    /* Устанавливаем фон */
-    box-shadow: 0 0 0 30px transparent inset !important;
+  /* Устанавливаем фон */
+  box-shadow: 0 0 0 30px transparent inset !important;
   -webkit-text-fill-color: #000 !important;
   border-radius: 0 !important;
 }
@@ -126,37 +126,29 @@ input:autofill:active {
 }
 
 .loader {
+  display: block;
   position: relative;
-  font-size: 48px;
-  letter-spacing: 6px;
-}
-.loader:before {
-  content: 'Loading';
-  color: #fff;
+  margin: 0 auto;
+  height: 12px;
+  width: 80%;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .loader:after {
   content: '';
-  width: 20px;
-  height: 20px;
-  background-color: rgba(165, 236, 200, 1);
-  background-image: radial-gradient(circle 2px, #fff4 100%, transparent 0),
-    radial-gradient(circle 1px, #fff3 100%, transparent 0);
-  background-position: 14px -4px, 12px -1px;
-  border-radius: 50%;
   position: absolute;
-  margin: auto;
-  top: -5px;
-  right: 66px;
-  transform-origin: center bottom;
-  animation: fillBaloon 1s ease-in-out infinite alternate;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: rgba(165, 236, 200, 1);
+  animation: 6s prog ease-in infinite;
 }
 
-@keyframes fillBaloon {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(3);
+@keyframes prog {
+  to {
+    width: 100%;
   }
 }
 
@@ -217,8 +209,8 @@ input:autofill:active {
   margin: 50px auto;
   background-color: #2d4841;
   -webkit-box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
-    -moz-box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
-    box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
+  -moz-box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
+  box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
 
   font-size: 24px;
   color: #fff;
