@@ -15,7 +15,7 @@ import { galleryRender} from './js/render-functions.js'; //← імпорт фу
 const refs = {
     form: document.querySelector('.search-form'),
     gallery: document.querySelector('.gallery'),
-    loader: document.querySelector('.loader'),
+    initialLoader: document.querySelector('.initial-loader'),
     loadMoreBtn: document.querySelector('.load-more'),
 }
 
@@ -98,11 +98,11 @@ refs.form.addEventListener('submit', async event => {
     currentPage = 1;
     currentQuery = query;
 
-    refs.loader.classList.remove('is-hidden'); //← видаляємо клас visually hidden щоб показати, що йде пошук, сторінка чекає на завантаження даних.
+    refs.initialLoader.classList.remove('is-hidden'); //← видаляємо клас visually hidden щоб показати, що йде пошук, сторінка чекає на завантаження даних.
     refs.gallery.innerHTML = '';
     
     const data = await getImages(query, currentPage);
-    refs.loader.classList.add('is-hidden');
+    refs.initialLoader.classList.add('is-hidden');
     
     if (data.hits.length === 0) { //якшо пошук не дав результату, тобто знайдено 0 співпадінь з введеним query тоді:
         refs.loadMoreBtn.classList.add('is-hidden'); // додаємо клас і ховаємо кнопку "Завантажити ще"
@@ -134,9 +134,10 @@ refs.loadMoreBtn.addEventListener('click', loadMoreImages);
 
 async function loadMoreImages() {
     currentPage++;  //додаємо до поточної сторінки ще одну
-    refs.loader.classList.remove('is-hidden'); //прибираємо індикатор завантаження інфи
-    refs.gallery.insertAdjacentHTML('beforeend', '<div class="loader"></div>'); // Додаємо loader
+    refs.loadMoreBtn.classList.add('is-hidden'); // ховаємо кнопку "Load more"
+    refs.gallery.insertAdjacentHTML('beforeend', '<div class="loader"></div>'); // додаємо loader
 
+    
     const data = await getImages(currentQuery, currentPage); //завантажуємо діні з серверу
     const loader = document.querySelector('.gallery .loader');
     if (loader) {

@@ -125,7 +125,8 @@ input:autofill:active {
   overflow: hidden;
 }
 
-.loader {
+.loader,
+.initial-loader {
   display: block;
   position: relative;
   margin: 0 auto;
@@ -135,7 +136,8 @@ input:autofill:active {
   border-radius: 10px;
   overflow: hidden;
 }
-.loader:after {
+.loader:after,
+.initial-loader:after {
   content: '';
   position: absolute;
   left: 0;
