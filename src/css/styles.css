@@ -138,7 +138,7 @@ input:autofill:active {
   content: '';
   width: 20px;
   height: 20px;
-  background-color: #ff3d00;
+  background-color: rgba(165, 236, 200, 1);
   background-image: radial-gradient(circle 2px, #fff4 100%, transparent 0),
     radial-gradient(circle 1px, #fff3 100%, transparent 0);
   background-position: 14px -4px, 12px -1px;
@@ -176,7 +176,7 @@ input:autofill:active {
 .gallery-item {
   max-width: 304px;
   height: 100%;
-  border: 1px solid #ff3d00;
+  border: 1px solid rgba(165, 236, 200, 1);
   margin: 8px auto;
 }
 
@@ -185,7 +185,7 @@ input:autofill:active {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #fff;
-  border-top: 1px solid #ff3d00;
+  border-top: 1px solid rgba(165, 236, 200, 1);
   padding: 3px;
 }
 
@@ -215,10 +215,10 @@ input:autofill:active {
   width: 150px;
   height: 60px;
   margin: 50px auto;
-  background-color: #ff3d00;
-  -webkit-box-shadow: 10px 10px 300px 120px rgba(168, 92, 69, 1);
-  -moz-box-shadow: 10px 10px 300px 120px rgba(168, 92, 69, 1);
-  box-shadow: 10px 10px 300px 120px rgba(168, 92, 69, 1);
+  background-color: #2d4841;
+  -webkit-box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
+    -moz-box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
+    box-shadow: 10px 10px 153px 3px rgba(165, 236, 200, 1);
 
   font-size: 24px;
   color: #fff;
