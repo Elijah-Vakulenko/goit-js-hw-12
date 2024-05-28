@@ -3,11 +3,17 @@
 
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/5d4b2cb0-55c1-44a5-88b7-98a482c429f5)
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/aa9480e5-aecd-4aec-813b-760b07aff898)
+
 <p>768+</p>
+
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/a6104d6a-6276-4fe8-8b5a-9903c7d49dcc)
+
 <p>1024+</p>
+
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/fdbaef65-3b2f-406b-a026-2d9f6775c7c9)
+
 <p>1200+</p>
+
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/2589a516-662a-49eb-b84f-c18d694b44ee)
 
 # SimpleLightBox viewer with a user friendly interface
