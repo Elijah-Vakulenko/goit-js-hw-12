@@ -35,7 +35,6 @@ function initializeLightbox() {
             captionDelay: 250,
             captionsData: 'alt',
             captionPosition: 'bottom',
-            className: 'simple-lightbox',
         });
     }
 }
