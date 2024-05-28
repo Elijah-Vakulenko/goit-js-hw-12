@@ -1,7 +1,7 @@
 # Mobile first
 <p>320+</p>
 
-![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/2c645cc0-8e75-4842-afe0-ac317cda5607)
+![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/5d4b2cb0-55c1-44a5-88b7-98a482c429f5)
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/aa9480e5-aecd-4aec-813b-760b07aff898)
 <p>768+</p>
 ![image](https://github.com/Elijah-Vakulenko/goit-js-hw-12/assets/154387383/a6104d6a-6276-4fe8-8b5a-9903c7d49dcc)
