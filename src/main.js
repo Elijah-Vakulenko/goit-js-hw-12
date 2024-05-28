@@ -65,7 +65,7 @@ function endOfSearchResults() { // функц. для кінця пошуку;
     iziToast.warning({
         title: 'Caution!',
         message: `We're sorry, but you've reached the end of search results.`,
-        position: "topCenter",
+        position: "bottomCenter",
         messageColor: 'white',
         backgroundColor: '#2D4841',
         progressBarColor: '#658474',
